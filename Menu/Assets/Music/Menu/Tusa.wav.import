@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Tusa.wav-69982d7eb49fda8e559674596a6d4462.sample"
+
+[deps]
+
+source_file="res://Assets/Music/Menu/Tusa.wav"
+dest_files=[ "res://.import/Tusa.wav-69982d7eb49fda8e559674596a6d4462.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

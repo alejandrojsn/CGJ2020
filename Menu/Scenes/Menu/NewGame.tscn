@@ -1,0 +1,66 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/Menu/NewGame.gd" type="Script" id=1]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Fonts/Montserrat-ExtraBold.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://Fonts/Montserrat-ExtraBold.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://Fonts/Montserrat-ExtraBold.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = SubResource( 5 )
+
+[node name="NewGame" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.05261
+margin_right = 1.05261
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_Name" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.1
+margin_top = 20.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 2 )
+text = "New Game"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadGame" type="Button" parent="."]
+margin_left = 700.0
+margin_top = 220.0
+margin_right = 920.0
+margin_bottom = 285.0
+custom_fonts/font = SubResource( 4 )
+text = "Load Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="."]
+margin_left = 700.0
+margin_top = 340.0
+margin_right = 920.0
+margin_bottom = 405.0
+custom_fonts/font = SubResource( 6 )
+text = "Back"
