@@ -1,0 +1,220 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Scripts/Menu/Options.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/Montserrat-ExtraBold.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Fonts/Montserrat-ExtraBold.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://Fonts/Montserrat-ExtraBold.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://Fonts/Montserrat-ExtraBold.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = SubResource( 5 )
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://Fonts/Montserrat-ExtraBold.ttf"
+
+[sub_resource type="DynamicFont" id=8]
+size = 30
+font_data = SubResource( 7 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFontData" id=10]
+font_path = "res://Fonts/Montserrat-ExtraBold.ttf"
+
+[sub_resource type="DynamicFont" id=11]
+size = 12
+font_data = SubResource( 10 )
+
+[sub_resource type="DynamicFontData" id=12]
+font_path = "res://Fonts/Montserrat-ExtraBold.ttf"
+
+[sub_resource type="DynamicFont" id=13]
+size = 12
+font_data = SubResource( 12 )
+
+[sub_resource type="DynamicFontData" id=14]
+font_path = "res://Fonts/Montserrat-ExtraBold.ttf"
+
+[sub_resource type="DynamicFont" id=15]
+size = 12
+font_data = SubResource( 14 )
+
+[node name="Options" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_Name" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.1
+margin_top = 20.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 2 )
+text = "Options Template"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Video" type="Button" parent="."]
+margin_left = 100.0
+margin_top = 170.0
+margin_right = 320.0
+margin_bottom = 235.0
+custom_fonts/font = SubResource( 4 )
+text = "Video"
+
+[node name="Audio" type="Button" parent="."]
+margin_left = 100.0
+margin_top = 270.0
+margin_right = 320.0
+margin_bottom = 335.0
+custom_fonts/font = SubResource( 6 )
+text = "Audio"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="."]
+margin_left = 100.0
+margin_top = 370.0
+margin_right = 320.0
+margin_bottom = 435.0
+custom_fonts/font = SubResource( 8 )
+text = "Volver"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="c_Video" type="Control" parent="."]
+visible = false
+anchor_left = 0.35
+anchor_top = 0.2
+anchor_right = 0.9
+anchor_bottom = 0.85
+margin_left = 2.45544
+margin_top = 1.22775
+margin_right = 42.4554
+margin_bottom = 41.2278
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B_FullScreen" type="OptionButton" parent="c_Video"]
+margin_left = 185.0
+margin_top = 55.0
+margin_right = 435.0
+margin_bottom = 105.0
+custom_fonts/font = SubResource( 9 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="c_Audio" type="Control" parent="."]
+visible = false
+anchor_left = 0.35
+anchor_top = 0.2
+anchor_right = 0.9
+anchor_bottom = 0.85
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="b_Master_Mute" type="Button" parent="c_Audio"]
+margin_left = 60.0
+margin_top = 128.772
+margin_right = 200.0
+margin_bottom = 178.772
+custom_fonts/font = SubResource( 11 )
+text = "Mute Master Vol."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="b_Music_Mute" type="Button" parent="c_Audio"]
+margin_left = 214.0
+margin_top = 130.0
+margin_right = 354.0
+margin_bottom = 180.0
+custom_fonts/font = SubResource( 13 )
+text = "Mute Music Vol."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="b_Effects_Mute" type="Button" parent="c_Audio"]
+margin_left = 370.0
+margin_top = 130.0
+margin_right = 510.0
+margin_bottom = 180.0
+custom_fonts/font = SubResource( 15 )
+text = "Mute Effects Vol."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sldr_Master" type="HSlider" parent="c_Audio"]
+margin_left = 60.0
+margin_top = 220.0
+margin_right = 190.0
+margin_bottom = 240.0
+max_value = 2000.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sldr_Music" type="HSlider" parent="c_Audio"]
+margin_left = 214.0
+margin_top = 220.0
+margin_right = 344.0
+margin_bottom = 240.0
+max_value = 2000.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sldr_Effects" type="HSlider" parent="c_Audio"]
+margin_left = 370.0
+margin_top = 220.0
+margin_right = 500.0
+margin_bottom = 240.0
+max_value = 2000.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="c_Back" type="Control" parent="."]
+visible = false
+anchor_left = 0.35
+anchor_top = 0.2
+anchor_right = 0.9
+anchor_bottom = 0.85
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
