@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://HealthBar.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Barra_Vida/barra de vida (negro).png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Barra_Vida/barra de vida (cuadro).png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Barra_Vida/barra de vida (blanco).png" type="Texture" id=4]
+
+[sub_resource type="Theme" id=1]
+
+[node name="HealthBar" type="Control"]
+margin_right = 4.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthUnder" type="TextureProgress" parent="."]
+margin_right = 52.0
+margin_bottom = 22.0
+theme = SubResource( 1 )
+step = 10.0
+value = 50.0
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+tint_under = Color( 0, 0, 0, 1 )
+tint_progress = Color( 0, 1, 0, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UpdateTween" type="Tween" parent="."]

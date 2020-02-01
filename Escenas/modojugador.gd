@@ -26,8 +26,8 @@ func _physics_process(delta):
 		Movimiento = Movimiento.normalized() * Velocidad #Normalizar la velocidad
 	var collision = move_and_collide(Movimiento*delta) #Sirve para evitar pasar un objeto por detras
 	if collision:
-		print("CColision")
-		Dialogo.mostrar("Jugdor 1", "Ouch")
+		print("Colision")
+#		Dialogo.mostrar("Jugdor 1", "Ouch")
 	
 	
 	if Movimiento.x != 0: #Al pulsar las flechas entra
@@ -48,15 +48,3 @@ func _physics_process(delta):
 			$Sprite_player.animation = "parado_frente"
 		if $Sprite_player.animation == "parado":
 			pass
-
-		
-		
-		
-		
-
-
-
-
-
-
-

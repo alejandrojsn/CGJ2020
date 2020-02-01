@@ -1,39 +1,69 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Escenas/modojugador.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Escenas/Caja_dialogo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/Fondo/fondo1.png" type="Texture" id=2]
+[ext_resource path="res://Escenas/HealthBar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sprites/Fondo/Navecita.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 534.935, 10 )
+extents = Vector2( 416, 10 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 13.0179, 303.486 )
 
-[node name="Node2D" type="Node2D"]
-
-[node name="ColorRect" parent="." instance=ExtResource( 2 )]
-margin_left = 527.849
-margin_top = 529.568
-margin_right = 1007.85
-margin_bottom = 589.568
+[node name="Primer_nivel" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 514.148, 611.355 )
+position = Vector2( 400, 608 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 507.332, -8.9207 )
+position = Vector2( 400, -8 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 1036.06, 297.641 )
+position = Vector2( 808, 304 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -13.6323, 306.73 )
 shape = SubResource( 2 )
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 104, 504, 136, 440, 160, 432, 176, 384, 176, 336, 168, 280, 144, 280, 128, 232, 120, 208, 128, 192, 144, 232, 192, 216, 248, 192, 296, 192, 344, 184, 416, 168, 464, 168, 520, 160, 536, 160, 552, 144, 552, 128, 544, 120, 504, 120, 456, 128, 392, 136, 336, 136, 304, 144, 256, 152, 200, 160, 168, 168, 136, 184, 112, 168, 80, 144, 64, 128, 40, 112, 8, 112, 0, 592, 72, 552 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 432, 536, 480, 536, 560, 544, 672, 552, 800, 568 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 624, 120, 648, 144, 712, 144, 752, 144, 792, 136, 800, 128, 800, 96, 768, 96, 728, 96 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 88, 544, 120, 512, 144, 496, 176, 488, 216, 496, 240, 504, 280, 512, 336, 520, 344, 520, 336, 544, 328, 536, 320, 520, 256, 512, 200, 504, 176, 504, 160, 504, 136, 520, 112, 552, 88, 568, 72, 600 )
+
 [node name="Player " parent="." instance=ExtResource( 1 )]
-position = Vector2( 369.025, 154.714 )
+position = Vector2( 312, 312 )
+
+[node name="HealthBar" parent="Player " instance=ExtResource( 3 )]
+margin_left = 16.0
+margin_top = -16.0
+margin_right = 64.0
+margin_bottom = 8.0
+
+[node name="HealthBar" parent="." instance=ExtResource( 3 )]
+margin_left = 20.0
+margin_top = 11.0
+margin_right = 72.0
+margin_bottom = 40.0
+
+[node name="fondo1" type="Sprite" parent="."]
+position = Vector2( 396, 304 )
+scale = Vector2( 1.01126, 1.33333 )
+z_index = -1
+texture = ExtResource( 2 )
+
+[node name="Navecita" type="Sprite" parent="fondo1"]
+position = Vector2( -304.569, 42 )
+texture = ExtResource( 4 )
