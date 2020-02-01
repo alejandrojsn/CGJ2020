@@ -6,6 +6,5 @@ func _set_caja_dialogo(node):
 	if is_instance_valid(node):
 		caja_dialogo = node
 
-func mostrar(nombre, texto):
-	self.caja_dialogo.texto.text = texto
-	self.caja_dialogo.nombre.text = nombre
+func mostrar(nombre: String, texto: String):
+	caja_dialogo.mostrar(nombre, texto)

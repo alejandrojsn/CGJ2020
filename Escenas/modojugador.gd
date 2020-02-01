@@ -4,12 +4,8 @@ export (int) var Velocidad
 var Movimiento = Vector2()
 var limite
 
-
-
-
 func _ready():
 	limite = get_viewport_rect().size #Va a tomar el tamaño de la pantalla
-
 
 func _physics_process(delta):
 	Movimiento =  Vector2() #Reiniciar el valor 
@@ -24,11 +20,7 @@ func _physics_process(delta):
 		Movimiento.y = -1
 	if Movimiento.length() > 0: #Verificar si se esta movimiento 
 		Movimiento = Movimiento.normalized() * Velocidad #Normalizar la velocidad
-	var collision = move_and_collide(Movimiento*delta) #Sirve para evitar pasar un objeto por detras
-	if collision:
-		print("CColision")
-		Dialogo.mostrar("Jugdor 1", "Ouch")
-	
+	move_and_collide(Movimiento*delta) #Sirve para evitar pasar un objeto por detras
 	
 	if Movimiento.x != 0: #Al pulsar las flechas entra
 		$Sprite_player.animation = "derecha"
@@ -48,15 +40,3 @@ func _physics_process(delta):
 			$Sprite_player.animation = "parado_frente"
 		if $Sprite_player.animation == "parado":
 			pass
-
-		
-		
-		
-		
-
-
-
-
-
-
-

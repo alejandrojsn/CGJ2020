@@ -23,6 +23,10 @@ config/icon="res://icon.png"
 
 Dialogo="*res://Singleton/Dialogo.gd"
 
+[display]
+
+window/size/width=800
+
 [rendering]
 
 quality/driver/driver_name="GLES2"

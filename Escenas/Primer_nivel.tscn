@@ -1,23 +1,22 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Escenas/modojugador.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/Caja_dialogo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Escenas/Primer_nivel.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 400, 10 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="ColorRect" parent="." instance=ExtResource( 2 )]
-margin_left = 2.0
-margin_top = 291.0
-margin_right = 482.0
-margin_bottom = 351.0
+position = Vector2( 400, 533 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 396, 266 )
+position = Vector2( 384, 152 )
 shape = SubResource( 1 )
 
 [node name="Player " parent="." instance=ExtResource( 1 )]
