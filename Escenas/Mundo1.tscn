@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Escenas/boss/Boss.gd" type="Script" id=1]
+[ext_resource path="res://Escenas/boss/Boss1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://modojugador.gd" type="Script" id=3]
+[ext_resource path="res://modojugador.tscn" type="PackedScene" id=4]
+
+[node name="Mundo1" type="Node2D"]
+position = Vector2( 4, 4 )
+
+[node name="Player " parent="." instance=ExtResource( 4 )]
+position = Vector2( 484.025, 444.714 )
+script = ExtResource( 3 )
+Velocidad = 250
+
+[node name="Boss" parent="." instance=ExtResource( 2 )]
+position = Vector2( 138, 114 )
+scale = Vector2( 0.983639, 0.922826 )
+script = ExtResource( 1 )

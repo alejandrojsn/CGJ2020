@@ -20,12 +20,15 @@ var Master_Mute = false
 var Music_Mute = false
 var Effects_Mute = false
 
-var res_width = 1920
-var res_height = 1080
+var res_width = 800
+var res_height = 600
 var fullscreen = false
 
 var sp_use = 32
 var sp_pause = 16777217
+
+var ready = true
+var ready_timer = 5
 
 #var music = AudioStreamPlayer2D.new()
 
@@ -33,7 +36,7 @@ var sp_pause = 16777217
 func _ready():
 	load_game()
 	choose_music()
-	resolution()
+	#resolution()
 	pass # Replace with function body.
 
 func _process(delta):
@@ -45,10 +48,16 @@ func _process(delta):
 	else:
 		play_Music = 1
 	
+	if(Master_Mute == true or Music_Mute == true):
+		play_Music = 1
+	
 	if(Master_Volume > 0 and Effects_Volume > 0):
 		play_Effects = int((Master_Volume / 2000) * (Effects_Volume / 2000) * 2000)
 	else:
 		play_Effects = 1
+	
+	if(Master_Mute == true or Effects_Mute == true):
+		play_Music = 1
 
 	$music.set_max_distance(play_Music)
 	pass
@@ -89,6 +98,7 @@ func game_music():
 	$music.play(0.0)
 	pass
 
+"""
 func resolution():
 	
 	ProjectSettings.set_setting("display/window/size/width", res_width)
@@ -104,6 +114,7 @@ func resolution():
 		OS.current_screen = 0;
 		OS.set_window_position(Vector2(0,0))
 	pass
+"""
 
 func save_game():
 	var settings = {
@@ -151,3 +162,4 @@ func load_game():
 	sp_pause = data['sp_pause']
 	
 	pass
+

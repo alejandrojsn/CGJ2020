@@ -24,4 +24,5 @@ func Options():
 
 
 func About():
+	get_tree().change_scene("res://Scenes/Menu/About.tscn")
 	pass

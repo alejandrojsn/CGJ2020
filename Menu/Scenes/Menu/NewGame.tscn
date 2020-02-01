@@ -47,20 +47,20 @@ __meta__ = {
 }
 
 [node name="LoadGame" type="Button" parent="."]
-margin_left = 700.0
+margin_left = 520.0
 margin_top = 220.0
-margin_right = 920.0
+margin_right = 746.0
 margin_bottom = 285.0
 custom_fonts/font = SubResource( 4 )
-text = "Load Game"
+text = "Cargar Juego"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Back" type="Button" parent="."]
-margin_left = 700.0
+margin_left = 520.0
 margin_top = 340.0
-margin_right = 920.0
+margin_right = 740.0
 margin_bottom = 405.0
 custom_fonts/font = SubResource( 6 )
-text = "Back"
+text = "Volver"
