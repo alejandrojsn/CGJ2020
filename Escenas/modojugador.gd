@@ -5,11 +5,8 @@ var Movimiento = Vector2()
 var limite
 
 
-
-
 func _ready():
 	limite = get_viewport_rect().size #Va a tomar el tamaño de la pantalla
-
 
 func _physics_process(delta):
 	Movimiento =  Vector2() #Reiniciar el valor 

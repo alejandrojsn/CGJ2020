@@ -4,7 +4,6 @@
 [ext_resource path="res://Sprites/Jugador/izquierda/protag32.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Jugador/izquierda/protag33.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Jugador/izquierda/protag34.png" type="Texture" id=4]
-[ext_resource path="res://Escenas/modojugador.gd" type="Script" id=5]
 [ext_resource path="res://Sprites/Jugador/espalda/protag19.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Jugador/espalda/protag20.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/Jugador/espalda/protag21.png" type="Texture" id=8]
@@ -62,7 +61,7 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 23 ) ],
 "loop": true,
-"name": "parado_frente",
+"name": "parado_espalda",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ) ],
@@ -75,9 +74,9 @@ animations = [ {
 "name": "frente",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": true,
-"name": "parado_derecha",
+"name": "espalda",
 "speed": 5.0
 } ]
 
@@ -94,7 +93,7 @@ __meta__ = {
 Velocidad = 250
 
 [node name="Sprite_player" type="AnimatedSprite" parent="."]
-position = Vector2( 42.2826, 42.6219 )
+position = Vector2( 6.2826, 2.6219 )
 frames = SubResource( 1 )
 animation = "parado"
 speed_scale = 1.5
@@ -104,7 +103,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 43.6578, 44.2928 )
+position = Vector2( 5.6578, 4.2928 )
 shape = SubResource( 2 )
 __meta__ = {
 "_edit_group_": true
