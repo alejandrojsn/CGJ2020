@@ -16,8 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Nueva"
-run/main_scene="res://modojugador.tscn"
+run/main_scene="res://Escenas/Primer_nivel.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Dialogo="*res://Singleton/Dialogo.gd"
 
 [rendering]
 
