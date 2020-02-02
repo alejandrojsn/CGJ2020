@@ -16,12 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Menu"
-run/main_scene="res://Scenes/Menu/Main.tscn"
+run/main_scene="res://Escenas/Main.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-Options="*res://Globals/Options.tscn"
+Options="*res://Escenas/Globals/Options.tscn"
 
 [display]
 

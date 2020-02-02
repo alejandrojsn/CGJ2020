@@ -4,6 +4,7 @@
 [ext_resource path="res://Sprites/Jugador/izquierda/protag32.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Jugador/izquierda/protag33.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Jugador/izquierda/protag34.png" type="Texture" id=4]
+[ext_resource path="res://Escenas/modojugador.gd" type="Script" id=5]
 [ext_resource path="res://Sprites/Jugador/espalda/protag19.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Jugador/espalda/protag20.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/Jugador/espalda/protag21.png" type="Texture" id=8]
@@ -39,16 +40,6 @@ animations = [ {
 "name": "izquierda",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
-"loop": true,
-"name": "derecha",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 1 ) ],
-"loop": true,
-"name": "parado_izquierda",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 23 ) ],
 "loop": true,
 "name": "parado",
@@ -59,9 +50,14 @@ animations = [ {
 "name": "espalda",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 23 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
 "loop": true,
-"name": "parado_espalda",
+"name": "derecha",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "parado_izquierda",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ) ],
@@ -72,11 +68,6 @@ animations = [ {
 "frames": [ ExtResource( 23 ), ExtResource( 22 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ],
 "loop": true,
 "name": "frente",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "espalda",
 "speed": 5.0
 } ]
 

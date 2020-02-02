@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Tusa.wav-69982d7eb49fda8e559674596a6d4462.sample"
+path="res://.import/Tusa.wav-c9dad55ade99ca6b5c736cb1eea61e7a.sample"
 
 [deps]
 
-source_file="res://Assets/Music/Menu/Tusa.wav"
-dest_files=[ "res://.import/Tusa.wav-69982d7eb49fda8e559674596a6d4462.sample" ]
+source_file="res://Menu/Assets/Music/Menu/Tusa.wav"
+dest_files=[ "res://.import/Tusa.wav-c9dad55ade99ca6b5c736cb1eea61e7a.sample" ]
 
 [params]
 

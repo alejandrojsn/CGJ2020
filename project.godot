@@ -22,11 +22,12 @@ config/icon="res://icon.png"
 [autoload]
 
 Dialogo="*res://Singleton/Dialogo.gd"
+Options="*res://Escenas/Globals/Options.tscn"
 
 [display]
 
 window/size/width=800
-window/size/borderless=true
+window/size/resizable=false
 
 [rendering]
 

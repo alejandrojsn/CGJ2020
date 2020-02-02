@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Alive.wav-027b1dfb7fa543597087d34c519edc97.sample"
+path="res://.import/Alive.wav-ca9c65191d1c474ea2db9d707c782661.sample"
 
 [deps]
 
-source_file="res://Assets/Music/Game/Alive.wav"
-dest_files=[ "res://.import/Alive.wav-027b1dfb7fa543597087d34c519edc97.sample" ]
+source_file="res://Menu/Assets/Music/Game/Alive.wav"
+dest_files=[ "res://.import/Alive.wav-ca9c65191d1c474ea2db9d707c782661.sample" ]
 
 [params]
 
