@@ -58,6 +58,9 @@ margin_right = 320.0
 margin_bottom = 235.0
 custom_fonts/font = SubResource( 4 )
 text = "Nuevo Juego"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Options" type="Button" parent="."]
 margin_left = 100.0
@@ -66,6 +69,9 @@ margin_right = 320.0
 margin_bottom = 335.0
 custom_fonts/font = SubResource( 6 )
 text = "Opciones"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="About" type="Button" parent="."]
 margin_left = 100.0

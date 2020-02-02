@@ -16,6 +16,7 @@ func NewGame():
 	pass
 
 func LoadGame():
+	#get_tree().change_scene("res://Escenas/Primer_nivel.tscn")
 	pass
 	
 func Back():

@@ -23,8 +23,8 @@ func _physics_process(delta):
 	if Movimiento.length() > 0: #Verificar si se esta movimiento 
 		Movimiento = Movimiento.normalized() * Velocidad #Normalizar la velocidad
 	var collision = move_and_collide(Movimiento*delta) #Sirve para evitar pasar un objeto por detras
-	if collision:
-		print("Colision")
+	#if collision:
+		#print("Colision")
 #		Dialogo.mostrar("Jugdor 1", "Ouch")
 	
 	

@@ -2,22 +2,28 @@ extends Node2D
 
 var NAME_NODE_PLAYER_RB = "KinematicBody2D"
 
+
 var w = -0.05 # velocidad
-var MAX_ANGULO_GIRO = 115
+var MAX_ANGULO_GIRO : float = 115
 var MIN_ANGULO_GIRO = -15
 
 var dex_giro = true # dextro giro
 var rotating = true
 
-var player_targeted = false
+var bod : KinematicBody2D;
 
+var player_targeted = false
 signal targeted_player
 
-func _ready():
-	pass
+var PLAYER_ID
+
 	
 func _process(delta):
-	find_player()
+	if get_parent().target != null && get_parent().get_node(get_parent().target) != null:
+		PLAYER_ID = get_parent().get_node(get_parent().target).get_instance_id()
+		find_player()
+	#print(get_parent().get_node(get_parent().target))
+
 
 """
 Busca al jugador y lo persigue.
@@ -50,10 +56,10 @@ func _ray_cast_duo(to_detect):
 	var rc1 = get_node("Boss_sprite/RayCast2D").get_collider() #derecha
 	var rc2 = get_node("Boss_sprite/RayCast2D2").get_collider() #izq
 	#if (rc1):
-	#	print(rc1, rc1.ID !=null)
-	if ( rc1 != null and rc1.ID):
+			#print(rc1, rc1.get_instance_id())
+	if ( rc1 != null and rc1.get_instance_id() == PLAYER_ID):
 
-		if (rc2 != null and rc2.ID !=null):
+		if (rc2 != null and rc2.get_instance_id() == PLAYER_ID):
 			rotating = false
 			if (dex_giro):
 				_emit_targeted_player(true, rc1)
@@ -65,7 +71,7 @@ func _ray_cast_duo(to_detect):
 			_emit_targeted_player(false, rc1)
 		rotating = true
 
-	elif (rc2 != null and rc2.ID !=null):
+	elif (rc2 != null and rc2.get_instance_id() == PLAYER_ID):
 		if dex_giro or not rotating:
 			_emit_targeted_player(false, rc2)
 			dex_giro = false
@@ -78,3 +84,6 @@ func _emit_targeted_player(in_, collider):
 	elif player_targeted and not in_:
 		player_targeted = false
 		emit_signal("targeted_player", false, collider.global_transform.origin)
+
+func get_player() -> Node:
+	return get_node(get_parent().target)

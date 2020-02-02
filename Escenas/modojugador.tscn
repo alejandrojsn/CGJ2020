@@ -45,14 +45,24 @@ animations = [ {
 "name": "izquierda",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "espalda",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 23 ) ],
 "loop": true,
 "name": "parado",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 6 ) ],
 "loop": true,
-"name": "espalda",
+"name": "parado_espalda",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ) ],
+"loop": true,
+"name": "parado_frente",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
@@ -65,19 +75,9 @@ animations = [ {
 "name": "parado_izquierda",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
-"loop": true,
-"name": "parado_espalda",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 23 ), ExtResource( 22 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ],
 "loop": true,
 "name": "frente",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 23 ) ],
-"loop": true,
-"name": "parado_frente",
 "speed": 5.0
 } ]
 
@@ -86,11 +86,8 @@ radius = 19.6718
 height = 27.1112
 
 [node name="Player " type="KinematicBody2D"]
-position = Vector2( 350.331, 327.056 )
+position = Vector2( 332.331, 305.056 )
 script = ExtResource( 5 )
-__meta__ = {
-"_edit_group_": true
-}
 Velocidad = 250
 
 [node name="Sprite_player" type="AnimatedSprite" parent="."]
@@ -111,8 +108,8 @@ __meta__ = {
 }
 
 [node name="HealthBar" parent="." instance=ExtResource( 32 )]
-margin_left = 20.5847
-margin_top = -15.7541
-margin_right = 66.5847
-margin_bottom = 4.24586
+margin_left = -17.4153
+margin_top = -60.7541
+margin_right = 28.5847
+margin_bottom = -40.7541
 [connection signal="animation_finished" from="Sprite_player" to="." method="_on_Sprite_player_animation_finished"]

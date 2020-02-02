@@ -79,7 +79,7 @@ func menu_music():
 
 	match new_choice:
 		1:
-			song = load("res://Música/Tusa.wav")
+			song = load("res://Música/Menu/Tusa.wav")
 	
 	$music.set_stream(song)
 	$music.play(0.0)

@@ -1,15 +1,16 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Escenas/modojugador.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/Fondo/fondo1.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Fondo/Navecita.png" type="Texture" id=3]
 [ext_resource path="res://Escenas/boss/Boss1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Escenas/Caja_dialogo.tscn" type="PackedScene" id=5]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
 
-func _ready():
-	$Boss/boss_seeker.player_id = $\"Player \"._ready().get_instance_id()
+#func _ready():
+#	$Boss/boss_seeker.player_id = $\"Player \"._ready().get_instance_id()
 "
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -66,3 +67,7 @@ texture = ExtResource( 3 )
 
 [node name="Boss" parent="." instance=ExtResource( 4 )]
 position = Vector2( 595.79, 257.895 )
+target = NodePath("../Player ")
+
+[node name="Caja_dialogo" parent="." instance=ExtResource( 5 )]
+position = Vector2( 400, 536 )

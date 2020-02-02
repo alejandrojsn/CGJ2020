@@ -1,5 +1,8 @@
 extends Node2D
 
+
+export(NodePath) var target;
+
 var proyectile = preload("res://Escenas/boss/boss_proyectile.tscn")
 var PROYECTILE_VELOCITY = 500
 var player_targeted = false
@@ -15,7 +18,7 @@ Evento: si encuentra al target le dispara.
 to FIX: disparar cada cuanto, en vez de cada vez que lo encuentra.
 """
 func _on_boss_seeker_targeted_player(in_, position_):
-	print(in_, position_)
+	#print(in_, position_)
 	if in_:
 		player_targeted = true
 		last_position = position_
