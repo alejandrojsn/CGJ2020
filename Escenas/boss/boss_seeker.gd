@@ -55,6 +55,7 @@ func _rotatex(g):
 func _ray_cast_duo(to_detect):
 	var rc1 = get_node("Boss_sprite/RayCast2D").get_collider() #derecha
 	var rc2 = get_node("Boss_sprite/RayCast2D2").get_collider() #izq
+	
 	#if (rc1):
 			#print(rc1, rc1.get_instance_id())
 	if ( rc1 != null and rc1.get_instance_id() == PLAYER_ID):

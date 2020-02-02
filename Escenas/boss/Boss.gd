@@ -41,8 +41,12 @@ func shoot(position_):
 		var magnitud = sqrt((vector.x * vector.x) + (vector.y * vector.y))
 		#b.velocity = ((position_ - position)/ Vector2(sqrt(position_.x * position_.x +  position.x * position.x), sqrt(position_.y * position_.y   position.y * position.y))) * PROYECTILE_VELOCITY
 		b.velocity = (vector / magnitud)* PROYECTILE_VELOCITY
+		#b.add_to_group("proyectiles")
 		add_child(b)
 		have_ammo = false
+		
+		get_node("boss_seeker/Boss_sprite/RayCast2D").add_exception(b)
+		get_node("boss_seeker/Boss_sprite/RayCast2D2").add_exception(b)
 	
 func wait(s):
 	var t = Timer.new()

@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+class_name modojugador
+
 export (int) var Velocidad
 var Movimiento = Vector2()
 var limite
@@ -8,6 +10,7 @@ var ID = "SOy YO"
 
 func _ready():
 	limite = get_viewport_rect().size #Va a tomar el tamaño de la pantalla
+	connect("hit_user", self, "_on_hurt")
 
 func _physics_process(delta):
 	Movimiento =  Vector2() #Reiniciar el valor 
@@ -24,6 +27,9 @@ func _physics_process(delta):
 		Movimiento = Movimiento.normalized() * Velocidad #Normalizar la velocidad
 	var collision = move_and_collide(Movimiento*delta) #Sirve para evitar pasar un objeto por detras
 	#if collision:
+		#print(collision.collider)
+		#if collision.collider.is_in_group("proyectiles"):
+			#print("hola")
 		#print("Colision")
 #		Dialogo.mostrar("Jugdor 1", "Ouch")
 	
@@ -46,3 +52,6 @@ func _physics_process(delta):
 			$Sprite_player.animation = "parado_frente"
 		if $Sprite_player.animation == "parado":
 			pass
+
+func _on_hurt():
+	pass
