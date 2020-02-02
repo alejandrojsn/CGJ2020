@@ -8,15 +8,16 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$LoadGame.connect("pressed", self, "LoadGame")
-	$Back.connect("pressed", self, "Back")
+	$Fondo/LoadGame.connect("pressed", self, "LoadGame")
+	$Fondo/Back.connect("pressed", self, "Back")
 	pass 
 
 func NewGame():
+	get_tree().change_scene("res://Escenas/Prime_nivel.tscn")
 	pass
 
 func LoadGame():
-	#get_tree().change_scene("res://Escenas/Primer_nivel.tscn")
+	get_tree().change_scene("res://Escenas/CinematicaInicio.tscn")
 	pass
 	
 func Back():

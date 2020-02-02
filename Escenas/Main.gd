@@ -8,9 +8,9 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$NewGame.connect("pressed", self, "NewGame")
-	$Options.connect("pressed", self, "Options")
-	$About.connect("pressed", self, "About")
+	$Fondo/NewGame.connect("pressed", self, "NewGame")
+	$Fondo/Options.connect("pressed", self, "Options")
+	$Fondo/About.connect("pressed", self, "About")
 
 
 func NewGame():

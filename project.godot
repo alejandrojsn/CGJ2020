@@ -9,19 +9,25 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node2D",
+"class": "Boss",
+"language": "GDScript",
+"path": "res://Escenas/boss2/Boss2.gd"
+}, {
 "base": "KinematicBody2D",
 "class": "modojugador",
 "language": "GDScript",
 "path": "res://Escenas/modojugador.gd"
 } ]
 _global_script_class_icons={
+"Boss": "",
 "modojugador": ""
 }
 
 [application]
 
-config/name="Nueva"
-run/main_scene="res://Escenas/Primer_nivel.tscn"
+config/name="Robo Repair Girl"
+run/main_scene="res://Escenas/Main.tscn"
 config/icon="res://icon.png"
 
 [autoload]

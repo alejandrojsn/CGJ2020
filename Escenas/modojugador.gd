@@ -10,7 +10,6 @@ var vida = 100
 
 func _ready():
 	limite = get_viewport_rect().size #Va a tomar el tamaño de la pantalla
-	connect("hit_user", self, "_on_hurt")
 
 func _physics_process(delta):
 	Movimiento =  Vector2() #Reiniciar el valor 

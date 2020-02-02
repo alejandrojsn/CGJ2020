@@ -75,11 +75,16 @@ func choose_music():
 func menu_music():
 	
 	randomize()
-	#new_choice = int(rand_range(1, 1))
-
+	new_choice = int(rand_range(1, 3))
+	#new_choice = 1
 	match new_choice:
 		1:
-			song = load("res://Música/Menu/Tusa.wav")
+			song = load("res://Música/Menu/Fanfare Game.wav")
+		2:
+			song = load("res://Música/Menu/Neon Genesis Evangelion.wav")
+		3:
+			song = load("res://Música/Menu/Uchiage Hanabi - MIDI.wav")
+
 	
 	$music.set_stream(song)
 	$music.play(0.0)

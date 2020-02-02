@@ -45,24 +45,19 @@ animations = [ {
 "name": "parado_espalda",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
-"loop": true,
-"name": "derecha",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "parado_izquierda",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 23 ), ExtResource( 22 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ],
-"loop": true,
-"name": "frente",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 23 ) ],
 "loop": true,
 "name": "parado_frente",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "derecha",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 23 ) ],
@@ -73,6 +68,11 @@ animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 31 ), ExtResource( 24 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "izquierda",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 22 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "frente",
 "speed": 5.0
 } ]
 
@@ -107,4 +107,3 @@ margin_left = -17.4153
 margin_top = -60.7541
 margin_right = 28.5847
 margin_bottom = -40.7541
-[connection signal="animation_finished" from="Sprite_player" to="." method="_on_Sprite_player_animation_finished"]

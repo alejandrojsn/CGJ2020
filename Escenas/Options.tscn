@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Escenas/Options.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Montserrat-ExtraBold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Backgrounds/godotofondoto.png" type="Texture" id=3]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://Fonts/Montserrat-ExtraBold.ttf"
@@ -64,13 +65,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -125.335
+margin_top = -38.3876
+margin_right = 974.665
+margin_bottom = 561.612
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="lbl_Name" type="Label" parent="."]
 anchor_right = 1.0
 anchor_bottom = 0.1
 margin_top = 20.0
 margin_bottom = 30.0
 custom_fonts/font = SubResource( 2 )
-text = "Options Template"
 align = 1
 valign = 1
 __meta__ = {

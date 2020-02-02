@@ -1,0 +1,258 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://piezas2.png" type="Texture" id=1]
+[ext_resource path="res://Escenas/boss/Boss1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Escenas/modojugador.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Robot.gd" type="Script" id=17]
+[ext_resource path="res://Enemy.gd" type="Script" id=18]
+[ext_resource path="res://columna1.png" type="Texture" id=35]
+[ext_resource path="res://columna2.png" type="Texture" id=36]
+[ext_resource path="res://fondo1.png" type="Texture" id=37]
+[ext_resource path="res://Navecita.png" type="Texture" id=38]
+[ext_resource path="res://torreta1.png" type="Texture" id=39]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 31.1216, 7.5025 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 31.46, 6.30078 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 33.128, 33.1475 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 6.06148, 307.904 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 523.203, 6.30939 )
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 33.5464
+
+[sub_resource type="CapsuleShape2D" id=7]
+radius = 98.1519
+height = 85.7955
+
+[sub_resource type="CircleShape2D" id=8]
+radius = 16.9989
+
+[node name="Nivel1" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -1.0
+margin_top = 3.0
+margin_right = 798.0
+margin_bottom = 605.0
+texture = ExtResource( 37 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wall20" type="StaticBody2D" parent="TextureRect" groups=[
+"Wall",
+]]
+position = Vector2( 654.763, 437.69 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Wall20"]
+position = Vector2( 0.742834, -6.91773 )
+scale = Vector2( 1.22358, 0.998109 )
+texture = ExtResource( 35 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Wall20"]
+position = Vector2( 0.648193, -36.2438 )
+shape = SubResource( 1 )
+
+[node name="Wall18" type="StaticBody2D" parent="TextureRect" groups=[
+"Wall",
+]]
+position = Vector2( 312.236, 439.723 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Wall18"]
+position = Vector2( 0.742834, -6.91773 )
+scale = Vector2( 1.22358, 0.998109 )
+texture = ExtResource( 35 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Wall18"]
+position = Vector2( 0.648193, -36.2438 )
+shape = SubResource( 1 )
+
+[node name="Wall15" type="StaticBody2D" parent="TextureRect" groups=[
+"Wall",
+]]
+position = Vector2( 233.663, 234.744 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Wall15"]
+position = Vector2( 0.742834, -6.91773 )
+scale = Vector2( 1.22358, 0.998109 )
+texture = ExtResource( 35 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Wall15"]
+position = Vector2( 0.648193, -35.2438 )
+shape = SubResource( 1 )
+
+[node name="Wall22" type="StaticBody2D" parent="TextureRect" groups=[
+"Wall",
+]]
+position = Vector2( 475.275, 220.623 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Wall22"]
+position = Vector2( 0.742834, -6.91773 )
+scale = Vector2( 1.22358, 0.998109 )
+texture = ExtResource( 35 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Wall22"]
+position = Vector2( 0.648193, -36.2438 )
+shape = SubResource( 1 )
+
+[node name="Wall12" type="StaticBody2D" parent="TextureRect" groups=[
+"Wall",
+]]
+position = Vector2( 730.578, 297.53 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Wall12"]
+position = Vector2( 0.742834, -6.91773 )
+scale = Vector2( 1.22358, 0.998109 )
+texture = ExtResource( 35 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Wall12"]
+position = Vector2( 0.648193, -36.2438 )
+shape = SubResource( 1 )
+
+[node name="Muro" type="Area2D" parent="TextureRect"]
+position = Vector2( 240.477, 152.597 )
+z_index = 1
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Muro"]
+position = Vector2( -5.13212, 21.3623 )
+scale = Vector2( 1.22565, 0.821194 )
+texture = ExtResource( 36 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Muro"]
+position = Vector2( -5, -2.46301 )
+shape = SubResource( 2 )
+
+[node name="Murox14" type="StaticBody2D" parent="TextureRect"]
+position = Vector2( 310.056, 23.2824 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Murox14"]
+position = Vector2( 167.359, 126.582 )
+scale = Vector2( 1.22528, 1 )
+texture = ExtResource( 36 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Murox14"]
+position = Vector2( 167.897, 125.085 )
+shape = SubResource( 3 )
+
+[node name="MarcoVertical" type="StaticBody2D" parent="TextureRect"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/MarcoVertical"]
+position = Vector2( -3.07205, 309.721 )
+shape = SubResource( 4 )
+
+[node name="MarcoVertical2" type="StaticBody2D" parent="TextureRect"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/MarcoVertical2"]
+position = Vector2( 805.965, 296.465 )
+shape = SubResource( 4 )
+
+[node name="MarcoHorizontal" type="StaticBody2D" parent="TextureRect"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/MarcoHorizontal"]
+position = Vector2( 510.38, -2 )
+shape = SubResource( 5 )
+
+[node name="MarcoHorizontal2" type="StaticBody2D" parent="TextureRect"]
+position = Vector2( -9.33077, 2.3327 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/MarcoHorizontal2"]
+position = Vector2( 512.328, 604.041 )
+shape = SubResource( 5 )
+
+[node name="Robot" type="Area2D" parent="TextureRect"]
+position = Vector2( 104.039, 179.046 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+scene = "res://Nivel2.tscn"
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Robot"]
+position = Vector2( 638.009, 260.548 )
+texture = ExtResource( 39 )
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Robot"]
+position = Vector2( 640.162, 255.504 )
+shape = SubResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TextureRect"]
+position = Vector2( 37.3232, 16.3289 )
+
+[node name="Sprite" type="Sprite" parent="TextureRect/StaticBody2D"]
+position = Vector2( 67.0492, 354.884 )
+texture = ExtResource( 38 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D"]
+position = Vector2( 48.8081, 344.385 )
+shape = SubResource( 7 )
+
+[node name="Pieza" type="Area2D" parent="TextureRect"]
+position = Vector2( 517.248, 399.752 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Pieza"]
+position = Vector2( 88.0327, -58.3711 )
+scale = Vector2( 0.61646, 0.637192 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Pieza"]
+position = Vector2( 88.3058, -58.1058 )
+shape = SubResource( 8 )
+
+[node name="Boss" parent="." instance=ExtResource( 2 )]
+position = Vector2( 605.15, 290.023 )
+target = NodePath("../Player ")
+
+[node name="Player " parent="." instance=ExtResource( 3 )]
+position = Vector2( 232.581, 351.606 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 5.00034, 111.844, 27.0004, 106.844, 53.0004, 111.844, 92.0005, 147.844, 125, 180.844, 170.001, 173.844, 196.001, 161.844, 284.001, 143.844, 342.001, 140.844, 400.001, 131.844, 435.001, 125.844, 510.001, 120.844, 553.001, 118.844, 551.001, 131.844, 436.001, 137.844, 346.001, 148.844, 279.001, 156.844, 191.001, 176.844, 121, 190.844, 48.0004, 120.844, 23.0004, 116.844 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 631.001, 109.844, 656.001, 106.844, 697.001, 102.844, 740.001, 100.844, 777.001, 91.844, 796.001, 83.844, 794.001, 101.844, 744.001, 111.844, 689.001, 115.844, 647.001, 119.844 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 7.00034, 559.845, 50.0004, 544.845, 101, 533.845, 143.001, 490.845, 184.001, 487.845, 223.001, 504.845, 256.001, 505.845, 301.001, 519.845, 352.001, 518.845, 344.001, 526.845, 262.001, 524.845, 222.001, 514.845, 168.001, 499.845, 143.001, 500.845, 117, 526.845, 91.0005, 543.845, 42.0004, 552.845, 22.0004, 566.845, 6.00034, 551.845, 4.00034, 549.845 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 432.001, 528.845, 501.001, 533.845, 568.001, 543.845, 793.001, 562.845, 787.001, 569.845, 517.001, 551.845 )
+[connection signal="body_entered" from="TextureRect/Muro" to="TextureRect/Muro" method="_on_Robot_body_entered"]
+[connection signal="body_entered" from="TextureRect/Robot" to="TextureRect/Robot" method="_on_Enemy_body_entered"]

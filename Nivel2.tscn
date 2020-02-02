@@ -1,0 +1,339 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://columna1.png" type="Texture" id=1]
+[ext_resource path="res://columna2.png" type="Texture" id=2]
+[ext_resource path="res://Escenas/modojugador.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Robot.gd" type="Script" id=4]
+[ext_resource path="res://fondo0 (1).png" type="Texture" id=5]
+[ext_resource path="res://fondo0 (2).png" type="Texture" id=6]
+[ext_resource path="res://fondo0 (3).png" type="Texture" id=7]
+[ext_resource path="res://Escenas/boss/Boss1.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Enemy2.gd" type="Script" id=39]
+[ext_resource path="res://torreta2.png" type="Texture" id=40]
+[ext_resource path="res://piezas1.png" type="Texture" id=41]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Fondo",
+"speed": 8.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 33.6638, 29.6228 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 33.7342, 6.30078 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 6.06148, 307.904 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 523.203, 4.47585 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 32.4189, 7.17303 )
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 31.5812
+
+[sub_resource type="CircleShape2D" id=8]
+radius = 23.2811
+
+[node name="Nivel2" type="Node2D"]
+position = Vector2( 3.34036, 6.68073 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 404.595, 297.195 )
+scale = Vector2( 1, 1.33576 )
+frames = SubResource( 1 )
+animation = "Fondo"
+frame = 1
+playing = true
+flip_h = true
+
+[node name="Wall11" type="StaticBody2D" parent="." groups=[
+"Wall",
+]]
+position = Vector2( 37.6177, 210.942 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Wall11"]
+position = Vector2( 0.742834, -6.91773 )
+scale = Vector2( 1.22358, 0.998109 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall11"]
+position = Vector2( 0.648193, -8.2438 )
+shape = SubResource( 2 )
+
+[node name="Wall20" type="StaticBody2D" parent="." groups=[
+"Wall",
+]]
+position = Vector2( 624.402, 137.245 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Wall20"]
+position = Vector2( 0.742834, -6.91773 )
+scale = Vector2( 1.22358, 0.998109 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall20"]
+position = Vector2( 1.08148, -7.63011 )
+shape = SubResource( 2 )
+
+[node name="Wall23" type="StaticBody2D" parent="." groups=[
+"Wall",
+]]
+position = Vector2( 451.479, 124.15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Wall23"]
+position = Vector2( 0.742834, -6.91773 )
+scale = Vector2( 1.22358, 0.998109 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall23"]
+position = Vector2( 1.08148, -3.63011 )
+shape = SubResource( 2 )
+
+[node name="Wall21" type="StaticBody2D" parent="." groups=[
+"Wall",
+]]
+position = Vector2( 241.014, 494.655 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Wall21"]
+position = Vector2( -0.0677019, -6.91773 )
+scale = Vector2( 1.19241, 0.998109 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall21"]
+position = Vector2( 1.08148, -7.63011 )
+shape = SubResource( 2 )
+
+[node name="Wall18" type="StaticBody2D" parent="." groups=[
+"Wall",
+]]
+position = Vector2( 203.825, 34.9093 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Wall18"]
+position = Vector2( 0.742834, -6.91773 )
+scale = Vector2( 1.22358, 0.998109 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall18"]
+position = Vector2( 0.648193, -5.2438 )
+shape = SubResource( 2 )
+
+[node name="Muro10" type="Area2D" parent="."]
+position = Vector2( 281.059, 159.055 )
+z_index = 1
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Muro10"]
+position = Vector2( -5.13487, 23.9344 )
+scale = Vector2( 1.2058, 0.981951 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Muro10"]
+position = Vector2( -5, -2.46301 )
+shape = SubResource( 3 )
+
+[node name="Muro4" type="Area2D" parent="."]
+position = Vector2( 629.69, 52.8478 )
+z_index = 1
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Muro4"]
+position = Vector2( -4.65934, 21.3623 )
+scale = Vector2( 1.22409, 0.821194 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Muro4"]
+position = Vector2( -5, -2.46301 )
+shape = SubResource( 3 )
+
+[node name="Muro9" type="Area2D" parent="."]
+position = Vector2( 456.767, 40.752 )
+z_index = 1
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Muro9"]
+position = Vector2( -4.6188, 21.3623 )
+scale = Vector2( 1.22565, 0.821194 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Muro9"]
+position = Vector2( -5, -2.46301 )
+shape = SubResource( 3 )
+
+[node name="Muro11" type="Area2D" parent="."]
+position = Vector2( 120.559, 316.665 )
+z_index = 1
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Muro11"]
+position = Vector2( -3.26563, 23.6422 )
+scale = Vector2( 1.2777, 0.968638 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Muro11"]
+position = Vector2( -3, 48.537 )
+shape = SubResource( 3 )
+
+[node name="Muro12" type="Area2D" parent="."]
+position = Vector2( 522.944, 290.889 )
+z_index = 1
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Muro12"]
+position = Vector2( -3.26563, 23.6422 )
+scale = Vector2( 1.2777, 0.968638 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Muro12"]
+position = Vector2( -3, 48.537 )
+shape = SubResource( 3 )
+
+[node name="Muro5" type="Area2D" parent="."]
+position = Vector2( 245.009, 410.381 )
+z_index = 1
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Muro5"]
+position = Vector2( -3.9295, 21.3623 )
+scale = Vector2( 1.2137, 0.821194 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Muro5"]
+position = Vector2( -5, -2.46301 )
+shape = SubResource( 3 )
+
+[node name="MarcoVertical" type="StaticBody2D" parent="."]
+position = Vector2( 3.22156, 0.105286 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarcoVertical"]
+position = Vector2( -3.07205, 309.721 )
+shape = SubResource( 4 )
+
+[node name="MarcoVertical2" type="StaticBody2D" parent="."]
+position = Vector2( 3.22156, 0.105286 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarcoVertical2"]
+position = Vector2( 807.538, 302.504 )
+shape = SubResource( 4 )
+
+[node name="MarcoHorizontal" type="StaticBody2D" parent="."]
+position = Vector2( 3.22156, 0.105286 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarcoHorizontal"]
+position = Vector2( 508.275, -5.67018 )
+shape = SubResource( 5 )
+
+[node name="MarcoHorizontal2" type="StaticBody2D" parent="."]
+position = Vector2( 3.22156, 0.105286 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarcoHorizontal2"]
+position = Vector2( 283.785, 602.681 )
+shape = SubResource( 5 )
+
+[node name="Piso_Columnas2" type="StaticBody2D" parent="."]
+position = Vector2( 3.22156, 0.105286 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piso_Columnas2"]
+position = Vector2( 113.121, 370.87 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Piso_Columnas2"]
+position = Vector2( 515.505, 343.662 )
+shape = SubResource( 6 )
+
+[node name="Piso_Columnas4" type="StaticBody2D" parent="."]
+position = Vector2( 3.22156, 0.105286 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piso_Columnas4"]
+position = Vector2( 271.933, 209.336 )
+shape = SubResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Robot" type="Area2D" parent="."]
+position = Vector2( 510.025, 233.694 )
+script = ExtResource( 39 )
+__meta__ = {
+"_edit_group_": true
+}
+scene = "res://Nivel3.tscn"
+
+[node name="Sprite" type="Sprite" parent="Robot"]
+position = Vector2( 242.659, 315.79 )
+texture = ExtResource( 40 )
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Robot"]
+position = Vector2( 241.058, 315.793 )
+shape = SubResource( 7 )
+
+[node name="Pieza" type="Area2D" parent="."]
+position = Vector2( 425.273, 88.1759 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Pieza"]
+position = Vector2( 125.208, 232.687 )
+scale = Vector2( 0.757618, 0.757617 )
+texture = ExtResource( 41 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pieza"]
+position = Vector2( 126.316, 232.687 )
+shape = SubResource( 8 )
+
+[node name="Player " parent="." instance=ExtResource( 3 )]
+position = Vector2( 38.0536, 55.7392 )
+
+[node name="Boss" parent="." instance=ExtResource( 9 )]
+position = Vector2( 396.56, 347.45 )
+target = NodePath("../Player ")
+[connection signal="body_entered" from="Muro10" to="Muro10" method="_on_Robot_body_entered"]
+[connection signal="body_entered" from="Muro4" to="Muro4" method="_on_Robot_body_entered"]
+[connection signal="body_entered" from="Muro9" to="Muro9" method="_on_Robot_body_entered"]
+[connection signal="body_entered" from="Muro11" to="Muro11" method="_on_Robot_body_entered"]
+[connection signal="body_entered" from="Muro12" to="Muro12" method="_on_Robot_body_entered"]
+[connection signal="body_entered" from="Muro5" to="Muro5" method="_on_Robot_body_entered"]
+[connection signal="body_entered" from="Robot" to="Robot" method="_on_Robot_body_entered"]

@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 40.177
+
+[node name="area1" type="Node2D"]
+
+[node name="level1" type="ColorRect" parent="."]
+margin_right = 391.0
+margin_bottom = 352.0
+color = Color( 0.111215, 0.570313, 0.031189, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area" type="Area2D" parent="level1"]
+gravity_vec = Vector2( 640, 1 )
+
+[node name="level2" type="ColorRect" parent="."]
+modulate = Color( 0.752941, 0.0431373, 0.0431373, 1 )
+margin_left = 354.0
+margin_right = 711.0
+margin_bottom = 352.0
+color = Color( 0.733333, 0.0980392, 0.0980392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D" type="Area2D" parent="level2"]
+gravity_vec = Vector2( -640, 1 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( 135.336, 166.094 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( 354.091, 170.84 )
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
