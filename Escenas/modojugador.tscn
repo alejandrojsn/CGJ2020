@@ -35,6 +35,11 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "parado_derecha",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 1 ), ExtResource( 31 ), ExtResource( 24 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "izquierda",
@@ -69,6 +74,11 @@ animations = [ {
 "loop": true,
 "name": "frente",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ) ],
+"loop": true,
+"name": "parado_frente",
+"speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -86,7 +96,7 @@ Velocidad = 250
 [node name="Sprite_player" type="AnimatedSprite" parent="."]
 position = Vector2( 6.2826, 2.6219 )
 frames = SubResource( 1 )
-animation = "parado"
+animation = "parado_frente"
 speed_scale = 1.5
 playing = true
 __meta__ = {

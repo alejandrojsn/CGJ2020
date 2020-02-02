@@ -44,7 +44,7 @@ polygon = PoolVector2Array( 624, 120, 648, 144, 712, 144, 752, 144, 792, 136, 80
 polygon = PoolVector2Array( 88, 544, 120, 512, 144, 496, 176, 488, 216, 496, 240, 504, 280, 512, 336, 520, 344, 520, 336, 544, 328, 536, 320, 520, 256, 512, 200, 504, 176, 504, 160, 504, 136, 520, 112, 552, 88, 568, 72, 600 )
 
 [node name="Player " parent="." instance=ExtResource( 1 )]
-position = Vector2( 312, 312 )
+position = Vector2( 248, 376 )
 
 [node name="HealthBar" parent="Player " instance=ExtResource( 3 )]
 margin_left = 16.0

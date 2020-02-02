@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Nueva"
-run/main_scene="res://Escenas/Primer_nivel.tscn"
+run/main_scene="res://Escenas/Mundo1.tscn"
 config/icon="res://icon.png"
 
 [autoload]
