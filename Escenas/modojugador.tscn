@@ -35,9 +35,14 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 14 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": true,
-"name": "parado_derecha",
+"name": "espalda",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "derecha",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 1 ) ],
@@ -45,9 +50,9 @@ animations = [ {
 "name": "parado_izquierda",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 23 ) ],
+"frames": [ ExtResource( 6 ) ],
 "loop": true,
-"name": "parado_frente",
+"name": "parado_espalda",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 1 ), ExtResource( 31 ), ExtResource( 24 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
@@ -60,9 +65,9 @@ animations = [ {
 "name": "espalda",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"frames": [ ExtResource( 23 ) ],
 "loop": true,
-"name": "derecha",
+"name": "parado_frente",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 23 ) ],
