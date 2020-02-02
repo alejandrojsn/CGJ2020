@@ -2,3 +2,7 @@
 /.directory
 
 **/*.import
+**/**/*.import
+**/**/**/*.import
+**/**/**/**/*.import
+**/**/**/**/**/*.import
