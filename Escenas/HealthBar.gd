@@ -32,7 +32,7 @@ func _on_health_update(health, amount):
 
 func _assign_color(health):
 	if health == 0:
-		pulse_tween.set_activate(false)
+		pulse_tween.set_active(false)
 	elif health < health_over.max_value * danger_zone:
 		if will_pulse:
 			if !pulse_tween.is_activate():
@@ -42,7 +42,7 @@ func _assign_color(health):
 		else:
 			health_over.tint_progress = danger_color
 	else:
-		pulse_tween.set_activate(false)
+		pulse_tween.set_active(false)
 		if health < health_over.max_value * caution_zone:
 			health_over.tint_progress = caution_color
 		else:

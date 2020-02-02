@@ -5,7 +5,7 @@ class_name modojugador
 export (int) var Velocidad
 var Movimiento = Vector2()
 var limite
-var ID = "SOy YO"
+var vida = 100
 
 
 func _ready():
@@ -54,4 +54,9 @@ func _physics_process(delta):
 			pass
 
 func _on_hurt():
+	vida -= 20
+	$HealthBar._on_health_update(vida, -20)
+	
+	if(vida <= 0):
+		get_tree().change_scene("res://Escenas/Main.tscn")
 	pass

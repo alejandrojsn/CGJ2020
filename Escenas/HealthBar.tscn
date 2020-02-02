@@ -10,6 +10,7 @@
 [node name="HealthBar" type="Control"]
 margin_right = 4.0
 margin_bottom = 14.0
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -25,7 +26,6 @@ texture_over = ExtResource( 3 )
 texture_progress = ExtResource( 4 )
 tint_under = Color( 0, 0, 0, 1 )
 tint_progress = Color( 0, 1, 0, 1 )
-script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -41,7 +41,6 @@ texture_over = ExtResource( 3 )
 texture_progress = ExtResource( 4 )
 tint_under = Color( 0, 0, 0, 1 )
 tint_progress = Color( 0, 1, 0, 1 )
-script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
