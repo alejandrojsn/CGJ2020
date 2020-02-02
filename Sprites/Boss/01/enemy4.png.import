@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pjespalda.png-ca04b3fd99778aae001786165f7b442a.stex"
+path="res://.import/enemy4.png-342b11cded1696aed08747ceb2ec87fd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Jugador/pjespalda.png"
-dest_files=[ "res://.import/pjespalda.png-ca04b3fd99778aae001786165f7b442a.stex" ]
+source_file="res://Sprites/Boss/01/enemy4.png"
+dest_files=[ "res://.import/enemy4.png-342b11cded1696aed08747ceb2ec87fd.stex" ]
 
 [params]
 

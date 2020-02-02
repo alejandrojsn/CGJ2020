@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pjfrente.png-bffcaaec1c141ec7335905a6148ed6a3.stex"
+path="res://.import/Bolita01.png-250f5c8d2fdc04ed6b35c98c7876b731.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Jugador/pjfrente.png"
-dest_files=[ "res://.import/pjfrente.png-bffcaaec1c141ec7335905a6148ed6a3.stex" ]
+source_file="res://Sprites/Boss/Bolita01.png"
+dest_files=[ "res://.import/Bolita01.png-250f5c8d2fdc04ed6b35c98c7876b731.stex" ]
 
 [params]
 
