@@ -1,0 +1,131 @@
+space				-	32
+escape			-	16777217
+
+
+
+
+
+space				-	32
+'				-	39
+-				-	45
+.				-	46
+/				-	47
+0				-	48
+1				-	49
+2				-	50
+3				-	51
+4				-	52
+5				-	53
+6				-	54
+7				-	55
+8				-	56
+9				-	57
+,				-	58
+;				-	59
+=				-	61
+a				-	65
+b				-	66
+c				-	67
+d				-	68
+e				-	69
+f				-	70
+g				-	71
+h				-	72
+i				-	73
+j				-	74
+k				-	75
+l				-	76
+m				-	77
+n				-	78
+o				-	79
+p				-	80
+q				-	81
+r				-	82
+s				-	83
+t				-	84
+u				-	85
+v				-	86
+w				-	87
+x				-	88
+y				-	89
+z				-	90
+\				-	92
+`				-	96
+[				-	123
+]				-	125
+escape			-	16777217
+tab				-	16777218
+backspace			-	16777220
+enter				-	16777221
+kp enter			-	16777222
+insert			-	16777223
+delete			-	16777224
+pause				-	16777225
+print screen		-	16777226
+home				-	16777229
+end				-	16777230
+left				-	16777231
+up				-	16777232
+right				-	16777233
+down				-	16777234
+page up			-	16777235
+page down			-	16777236
+shift				-	16777237
+control			-	16777238
+alt				-	16777240
+scroll lock		-	16777243
+F1				-	16777244
+F2				-	16777245
+F3				-	16777246
+F4				-	16777247
+F5				-	16777248
+F6				-	16777249
+F7				-	16777250
+F8				-	16777251
+F9				-	16777252
+F10				-	16777253
+F11				-	16777254
+F12				-	16777255
+kp *				-	16777345
+kp /				-	16777346
+kp -				-	16777347
+kp .				-	16777348
+kp +				-	16777349
+kp 0				-	16777350
+kp 1				-	16777351
+kp 2				-	16777352
+kp 3				-	16777353
+kp 4				-	16777354
+kp 5				-	16777355
+kp 6				-	16777356
+kp 7				-	16777357
+kp 8				-	16777358
+kp 9				-	16777359
+windows key			-	134217728
+	
+
+
+Face_1				-	0
+Face_2				-	1
+Face_3				-	3
+Face_4				-	2
+Left_Button			-	4
+Left_Trigger			-	6
+Right_Button			-	5
+Right_Trigger			-	7
+Start				-	11
+Back				-	10
+Up				-	12
+Right				-	15
+Down				-	13
+Left				-	14
+
+Left Analog
+	Pressed			-	8
+	Vertical Axis		-	0
+	Horizontal Axis		-	1
+
+Right Analog
+	Pressed			-	9
+	Vertical Axis		-	3
+	Horizontal Axis		-	2
