@@ -11,6 +11,6 @@ position = Vector2( 4, 4 )
 position = Vector2( 484.025, 444.714 )
 
 [node name="Boss" parent="." instance=ExtResource( 2 )]
-position = Vector2( 138, 114 )
+position = Vector2( 280, 82 )
 scale = Vector2( 0.983639, 0.922826 )
 script = ExtResource( 1 )

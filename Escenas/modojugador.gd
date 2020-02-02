@@ -3,6 +3,7 @@ extends KinematicBody2D
 export (int) var Velocidad
 var Movimiento = Vector2()
 var limite
+var ID = "SOy YO"
 
 
 func _ready():

@@ -49,11 +49,11 @@ func _rotatex(g):
 func _ray_cast_duo(to_detect):
 	var rc1 = get_node("Boss_sprite/RayCast2D").get_collider() #derecha
 	var rc2 = get_node("Boss_sprite/RayCast2D2").get_collider() #izq
-	if (rc1):
-		print(rc1, rc1.get_instance_id())
-	if (rc1 and rc1.get_instance_id() == 1306):
+	#if (rc1):
+	#	print(rc1, rc1.ID !=null)
+	if ( rc1 != null and rc1.ID):
 
-		if (rc2 and rc2.get_instance_id() == 1306):
+		if (rc2 != null and rc2.ID !=null):
 			rotating = false
 			if (dex_giro):
 				_emit_targeted_player(true, rc1)
@@ -65,7 +65,7 @@ func _ray_cast_duo(to_detect):
 			_emit_targeted_player(false, rc1)
 		rotating = true
 
-	elif (rc2 and rc2.get_instance_id() == 1306):
+	elif (rc2 != null and rc2.ID !=null):
 		if dex_giro or not rotating:
 			_emit_targeted_player(false, rc2)
 			dex_giro = false
